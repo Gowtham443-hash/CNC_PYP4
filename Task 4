@@ -1,0 +1,23 @@
+List1 = [1, 2, 3, 4, 5]
+List2 = [8, 9, 10, 11]
+Students = {"Prasanth": 90, "Hari": 89, "Ahmed": 76, "Yashwanth": 71, "Nithin": 60}
+
+# Merge lists
+merge_list = List1 + List2
+print("The merged list is:", merge_list)
+
+# Filter even numbers from the merged list
+even_num = list(filter(lambda x: x % 2 == 0, merge_list))
+print("Even Numbers:", even_num)
+
+# Square each number in the merged list
+squared = list(map(lambda x: x**2, merge_list))
+print("The numbers squared are:", squared)
+
+# Create dictionary of passed students (marks >= 75)
+pass_student = {k: v for k, v in Students.items() if v >= 75}
+print("The passed students are:", pass_student)
+
+# Add 5 bonus marks to all students
+bonus = {k: v + 5 for k, v in Students.items()}
+print("Students with bonus marks:", bonus)
